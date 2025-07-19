@@ -16,7 +16,7 @@ services:
       - chromadb_data:/chroma/chroma
     
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:8000/api/v2/heartbeat || exit 1"]
+      test: ["CMD-SHELL", "curl -f http://localhost:8011/api/v2/heartbeat || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
